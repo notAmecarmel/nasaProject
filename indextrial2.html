@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MCQ Quiz</title>
+    <style>
+      /* Reset default margin and padding */
+      body,
+      h1,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Set background to a space-themed image */
+      body {
+        background: url("space-background.jpg") no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        color: white;
+        text-align: left;
+        background-image: url("stars.png");
+      }
+
+      /* Add your CSS styles here */
+
+      /* Quiz container style */
+      #quizContainer {
+        background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+
+      /* Quiz question style */
+      p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      /* Answer option style */
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      /* Radio button style */
+      input[type="radio"] {
+        margin-right: 5px;
+      }
+
+      /* Submit button style */
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      /* Scoreboard style */
+      #scoreboard {
+        display: none;
+        margin-top: 20px;
+      }
+
+      /* Progress bar style */
+      #progressBar {
+        width: 100%;
+        height: 30px;
+        background-color: #ccc;
+        margin-top: 10px;
+        border-radius: 5px;
+      }
+
+      #progress {
+        width: 0%;
+        height: 100%;
+        background-color: #4caf50;
+        border-radius: 5px;
+      }
+
+      /* Next button style */
+      #nextButton {
+        display: none;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="index.html" target="_blank" title="Takes you to learn!"></a>
+    <div id="quizContainer">
+      <h1 style="text-align: left">Eclipses - Celestial hide and seek</h1>
+      <br /><br />
+      <p>
+        First watch this short video in which youll learn all about the
+        facinating phenomenon called eclipses
+      </p>
+
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/9kGOETzzTb8?si=6VwoTLz4eQL7f-vY"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+      <br /><br />
+      <p>
+        Now that you are back from your curiosity voyage, you can prove your
+        knowledge by participating in this short quiz
+      </p>
+      <br /><br />
+      <form id="quizForm">
+        <!-- Question 1 -->
+        <b><p>1. What are eclipses?</p></b>
+        <label>
+          <input type="radio" name="q1" value="london" /> Magic tricks in the
+          sky </label
+        ><br />
+        <label>
+          <input type="radio" name="q1" value="London" /> When planets play
+          hide-and-seek </label
+        ><br />
+        <label>
+          <input type="radio" name="q1" value="1" /> Celestial events involving
+          objects lining up in space </label
+        ><br />
+
+        <!-- Question 2 -->
+        <b><p>2. How many main types of eclipses are there?</p></b>
+        <label> <input type="radio" name="q2" value="Mars" /> 1 </label><br />
+        <label> <input type="radio" name="q2" value="1" /> 2 </label><br />
+        <label> <input type="radio" name="q2" value="Jupiter" /> 3 </label
+        ><br />
+
+        <!-- Question 3 -->
+        <b
+          ><p>
+            3. What type of eclipse turns day into night when the Sun is
+            completely covered?
+          </p></b
+        >
+        <label>
+          <input type="radio" name="q3" value="1" /> Total solar eclipse </label
+        ><br />
+        <label>
+          <input type="radio" name="q3" value="Ag" /> Partial solar eclipse </label
+        ><br />
+        <label>
+          <input type="radio" name="q3" value="Fe" /> Annular solar eclips </label
+        ><br />
+
+        <!-- Question 4 -->
+        <b><p>4. What is an annular solar eclipse often compared to?</p></b>
+        <label>
+          <input type="radio" name="q4" value="Shakespeare" /> A giant cosmic
+          hug </label
+        ><br />
+        <label>
+          <input type="radio" name="q4" value="Hemingway" /> A cosmic cookie </label
+        ><br />
+        <label>
+          <input type="radio" name="q4" value="1" /> A ring of fire donut </label
+        ><br />
+
+        <!-- Question 5 -->
+        <b><p>5. During a total solar eclipse, what happens to the Sun?</p></b>
+        <label>
+          <input type="radio" name="q5" value="1" /> It disappears completely </label
+        ><br />
+        <label>
+          <input type="radio" name="q5" value="Elephant" /> It becomes extra
+          bright </label
+        ><br />
+        <label>
+          <input type="radio" name="q5" value="Giraffe" /> It turns blue </label
+        ><br />
+
+        <!-- Question 6 -->
+        <b><p>6. What happens during a partial solar eclipse?</p></b>
+        <label>
+          <input type="radio" name="q6" value="Nitrogen" /> The Moon covers the
+          Sun completely </label
+        ><br />
+        <label>
+          <input type="radio" name="q6" value="1" /> The Moon covers part of the
+          Sun, creating a crescent shape </label
+        ><br />
+        <label>
+          <input type="radio" name="q6" value="Carbon Dioxide" /> The Sun turns
+          into a star </label
+        ><br />
+
+        <!-- Question 7 -->
+        <b><p>7. How does a lunar eclipse occur?</p></b>
+        <label>
+          <input type="radio" name="q7" value="Jupiter" /> When the Sun gets too
+          hot </label
+        ><br />
+        <label>
+          <input type="radio" name="q7" value="Saturn" /> When the Moon gets
+          tired and goes to sleep </label
+        ><br />
+        <label>
+          <input type="radio" name="q7" value="1" /> When the Earth's shadow
+          falls onto the Moon </label
+        ><br />
+
+        <!-- Question 8 -->
+        <b><p>8. What's unique about a total lunar eclipse?</p></b>
+        <label>
+          <input type="radio" name="q8" value="F. Scott Fitzgerald" /> The Moon
+          turns into cheese </label
+        ><br />
+        <label>
+          <input type="radio" name="q8" value="1" /> The Moon appears reddish
+          due to Earth's shadow </label
+        ><br />
+        <label>
+          <input type="radio" name="q8" value="Mark Twain" /> The Moon
+          disappears from the sky </label
+        ><br />
+
+        <!-- Question 9 -->
+        <b
+          ><p>9. What effect can a solar eclipse have on our environment?</p></b
+        >
+        <label>
+          <input type="radio" name="q9" value="H2O" /> It makes animals dance in
+          the sky </label
+        ><br />
+        <label>
+          <input type="radio" name="q9" value="1" /> It cools down and gets
+          darker, like twilight </label
+        ><br />
+        <label>
+          <input type="radio" name="q9" value="CO2" /> It causes the Sun to
+          shine even brighter </label
+        ><br />
+
+        <!-- Question 10 -->
+        <b><p>10. Why do scientists and space explorers study eclipses?</p></b>
+        <label>
+          <input type="radio" name="q10" value="Mount Everest" /> To find hidden
+          treasures in space </label
+        ><br />
+        <label>
+          <input type="radio" name="q10" value="1" /> To learn more about our
+          planet and the universe </label
+        ><br />
+        <label>
+          <input type="radio" name="q10" value="Makalu" /> Because eclipses are
+          a secret code from aliens </label
+        ><br />
+
+        <input type="submit" value="Submit" />
+      </form>
+
+      <div id="scoreboard">
+        <h2>Score: <span id="score">0</span>/10</h2>
+        <div id="progressBar">
+          <div id="progress"></div>
+        </div>
+        <button id="nextButton">Next</button>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript code for the quiz and progress bar
+      const quizForm = document.getElementById("quizForm");
+      const scoreSpan = document.getElementById("score");
+      const nextButton = document.getElementById("nextButton");
+      const scoreboard = document.getElementById("scoreboard");
+      const progressBar = document.getElementById("progress");
+
+      let score = 0;
+      let currentQuestion = 1;
+      const totalQuestions = 10; // Total number of questions in the quiz
+
+      quizForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Check answers (Replace with your own answers)
+        const answers = {
+          q1: "1",
+          q2: "1",
+          q3: "1",
+          q4: "1",
+          q5: "1",
+          q6: "1",
+          q7: "1",
+          q8: "1",
+          q9: "1",
+          q10: "1",
+        };
+
+        for (let i = 1; i <= totalQuestions; i++) {
+          const selected = document.querySelector(
+            `input[name="q${i}"]:checked`
+          );
+          if (selected) {
+            const questionName = `q${i}`;
+            if (selected.value === answers[questionName]) {
+              score++;
+              // Increase progress by 10% for each correct answer
+              progressBar.style.width = `${(score / totalQuestions) * 100}%`;
+            }
+          }
+        }
+
+        // Update the score
+        scoreSpan.textContent = score;
+
+        // Show the scoreboard
+        scoreboard.style.display = "block";
+
+        // Disable form inputs
+        const formInputs = quizForm.querySelectorAll('input[type="radio"]');
+        for (let i = 0; i < formInputs.length; i++) {
+          formInputs[i].disabled = true;
+        }
+
+        // Show the next button
+        nextButton.style.display = "block";
+      });
+
+      nextButton.addEventListener("click", function () {
+        // Replace 'YOUR_LINK_HERE' with the desired hyperlink
+        const yourLink = "index.html";
+        window.location.href = yourLink;
+      });
+    </script>
+  </body>
+</html>
